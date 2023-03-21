@@ -1,5 +1,24 @@
+import java.util.Scanner;
+
+
 public class Main {
+
+
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        int year = 2023;
+        boolean isLeapYear;
+
+        // divisible by 4
+        isLeapYear = (year % 4 == 0);
+
+        // divisible by 4, not by 100, or divisible by 400
+        isLeapYear = isLeapYear && (year % 100 != 0 || year % 400 == 0);
+
+        if (isLeapYear) {
+            System.out.println(year + " is a leap year.");
+        } else {
+            System.out.println(year + " is not a leap year.");
+        }
     }
 }
+
